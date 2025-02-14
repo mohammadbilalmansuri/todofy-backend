@@ -15,4 +15,6 @@ Todofy is the ultimate task management app, designed to help you organize, prior
 - **Backend** - Node.js, Express, Zod, JWT, bcrypt
 - **Database** - MongoDB with Mongoose
 
-### Check out the frontend repository [here](https://github.com/mohammadbilalmansuri/todofy-frontend).
+---
+
+> Check out the frontend repository [here](https://github.com/mohammadbilalmansuri/todofy-frontend).
