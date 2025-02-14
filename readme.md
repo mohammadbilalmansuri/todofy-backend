@@ -1,20 +1,21 @@
-# Todofy - Where Todos Take Shape
+# Todofy Backend
 
-Todofy is the ultimate task management app, designed to help you organize, prioritize, and track your daily tasks effortlessly. With a sleek, intuitive interface, Todofy keeps you focused and motivated to achieve your goals.
+This repository contains the backend of **Todofy**, a powerful task management app designed to help you **organize, prioritize, and track** your daily tasks effortlessly. Built with a **secure and efficient architecture**, Todofy ensures seamless task management and user authentication.
 
-## **Features**
+## Features
 
-- **User Authentication** - Register, login, logout, and account deletion.
-- **Task Management** - Create, update, and delete tasks with ease.
-- **Task Completion** - Mark tasks as completed to track progress.
-- **Time Tracking** - View time remaining for each task to meet deadlines efficiently.
+- **User Authentication** – Securely register, log in, log out, and delete accounts.
+- **Task Management** – Easily create, update, and delete tasks.
+- **Task Completion** – Mark tasks as completed to track progress.
+- **Time Tracking** – View remaining time for each task to meet deadlines efficiently.
 
 ## Tech Stack
 
-- **Frontend** - HTML, Tailwind CSS, JavaScript
-- **Backend** - Node.js, Express, Zod, JWT, bcrypt
-- **Database** - MongoDB with Mongoose
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB with Mongoose
+- **Authentication**: JWT (JSON Web Token), Bcrypt (Password Hashing)
+- **Validation**: Zod (Schema Validation)
 
 ## Frontend Repository
 
-Check out the frontend repository [here](https://github.com/mohammadbilalmansuri/todofy-frontend).
+For the UI/UX implementation, check out the **[Todofy Frontend Repository](https://github.com/mohammadbilalmansuri/todofy-frontend)**.
