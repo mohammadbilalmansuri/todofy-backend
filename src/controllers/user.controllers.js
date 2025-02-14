@@ -94,7 +94,7 @@ export const logoutUser = asyncHandler(async (req, res) => {
   res
     .clearCookie("accessToken", COOKIE_OPTIONS)
     .clearCookie("refreshToken", COOKIE_OPTIONS);
-  return new ApiResponse(204, "User logged out successfully").send(res);
+  return new ApiResponse(200, "User logged out successfully").send(res);
 });
 
 export const refreshAccessToken = asyncHandler(async (req, res) => {
@@ -155,5 +155,5 @@ export const deleteUser = asyncHandler(async (req, res) => {
   res
     .clearCookie("accessToken", COOKIE_OPTIONS)
     .clearCookie("refreshToken", COOKIE_OPTIONS);
-  return new ApiResponse(204, "User deleted successfully").send(res);
+  return new ApiResponse(200, "User deleted successfully").send(res);
 });

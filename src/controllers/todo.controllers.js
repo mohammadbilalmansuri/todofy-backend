@@ -69,5 +69,5 @@ export const toggleTodoStatus = asyncHandler(async (req, res) => {
 
 export const deleteTodo = asyncHandler(async (req, res) => {
   await req.todo.deleteOne();
-  return new ApiResponse(204, "Todo deleted successfully").send(res);
+  return new ApiResponse(200, "Todo deleted successfully").send(res);
 });
