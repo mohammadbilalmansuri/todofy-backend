@@ -11,7 +11,7 @@ export const getTodos = asyncHandler(async (req, res) => {
   const todos = await Todo.find({ owner: req.user?.id });
 
   if (todos.length === 0) {
-    return new ApiResponse(404, "No todos found", []).send(res);
+    return new ApiResponse(200, "No todos found", []).send(res);
   }
 
   return new ApiResponse(200, "Todos fetched successfully", todos).send(res);
