@@ -14,7 +14,7 @@ const passwordValidation = z
   .max(24, "Password must not exceed 24 characters.")
   .regex(
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\W_]).*$/,
-    "Password must include at least one lowercase letter, one uppercase letter, one number, and one special character."
+    "Password must be 8-24 characters long, include uppercase, lowercase, number, and special character"
   );
 
 const todoTextValidation = z
