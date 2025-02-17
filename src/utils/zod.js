@@ -4,7 +4,7 @@ import ApiError from "./ApiError.js";
 const nameValidation = z
   .string()
   .min(3, "Name must be at least 3 characters long.")
-  .max(50, "Name must not exceed 50 characters.");
+  .max(30, "Name must not exceed 30 characters.");
 
 const emailValidation = z.string().email("Please enter a valid email address.");
 
@@ -20,11 +20,11 @@ const passwordValidation = z
 const todoTitleValidation = z
   .string()
   .min(1, "Title is required and cannot be empty.")
-  .max(100, "Title must not exceed 100 characters.");
+  .max(150, "Title must not exceed 150 characters.");
 
 const todoDescriptionValidation = z
   .string()
-  .max(200, "Description must not exceed 200 characters.")
+  .max(300, "Description must not exceed 300 characters.")
   .optional();
 
 const dueTimeValidation = z
