@@ -2,15 +2,10 @@ import { Schema, model } from "mongoose";
 
 const todoSchema = new Schema(
   {
-    title: {
+    text: {
       type: String,
-      required: [true, "Title is required"],
-      maxlength: [150, "Title cannot be more than 150 characters"],
-      trim: true,
-    },
-    description: {
-      type: String,
-      maxlength: [300, "Description cannot be more than 300 characters"],
+      required: [true, "Text is required"],
+      maxlength: [300, "Text cannot be more than 300 characters"],
       trim: true,
     },
     status: {

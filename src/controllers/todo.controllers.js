@@ -18,14 +18,10 @@ export const getTodos = asyncHandler(async (req, res) => {
 });
 
 export const addTodo = asyncHandler(async (req, res) => {
-  const { title, description, dueTime } = doValidation(
-    todoValidation,
-    req.body
-  );
+  const { text, dueTime } = doValidation(todoValidation, req.body);
 
   const createdTodo = await Todo.create({
-    title,
-    description: description || "",
+    text,
     dueTime,
     owner: req.user?.id,
   });
@@ -36,14 +32,10 @@ export const addTodo = asyncHandler(async (req, res) => {
 });
 
 export const updateTodo = asyncHandler(async (req, res) => {
-  const { title, description, dueTime } = doValidation(
-    todoValidation,
-    req.body
-  );
+  const { text, dueTime } = doValidation(todoValidation, req.body);
 
   const todoToUpdate = req.todo;
-  todoToUpdate.title = title;
-  todoToUpdate.description = description || "";
+  todoToUpdate.text = text;
   todoToUpdate.dueTime = dueTime;
 
   const updatedTodo = await todoToUpdate.save();

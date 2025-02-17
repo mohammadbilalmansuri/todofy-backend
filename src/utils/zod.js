@@ -17,15 +17,10 @@ const passwordValidation = z
     "Password must include at least one lowercase letter, one uppercase letter, one number, and one special character."
   );
 
-const todoTitleValidation = z
+const todoTextValidation = z
   .string()
-  .min(1, "Title is required and cannot be empty.")
-  .max(150, "Title must not exceed 150 characters.");
-
-const todoDescriptionValidation = z
-  .string()
-  .max(300, "Description must not exceed 300 characters.")
-  .optional();
+  .min(1, "Text is required and cannot be empty.")
+  .max(300, "Text must not exceed 300 characters.");
 
 const dueTimeValidation = z
   .string()
@@ -50,8 +45,7 @@ export const deleteUserValidation = z.object({
 });
 
 export const todoValidation = z.object({
-  title: todoTitleValidation,
-  description: todoDescriptionValidation,
+  text: todoTextValidation,
   dueTime: dueTimeValidation,
 });
 
