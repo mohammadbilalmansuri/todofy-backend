@@ -141,7 +141,7 @@ export const deleteUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user?.id).select("+password");
 
   if (!user || !(await user.comparePassword(password))) {
-    throw new ApiError(401, "Invalid password");
+    throw new ApiError(400, "Invalid password");
   }
 
   const deleteResult = await User.deleteOne({ _id: req.user?.id });
