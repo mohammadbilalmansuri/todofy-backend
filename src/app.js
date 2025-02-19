@@ -4,12 +4,13 @@ import cookieParser from "cookie-parser";
 import userRoutes from "./routes/user.routes.js";
 import todoRoutes from "./routes/todo.routes.js";
 import globalErrorHandler from "./middlewares/errorHandler.middleware.js";
+import { ALLOWED_ORIGINS } from "./constants.js";
 
 const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:5173"],
+    origin: ALLOWED_ORIGINS,
     credentials: true,
   })
 );
