@@ -16,7 +16,7 @@ const verifyAccess = async (req, res, next) => {
     req.user = { id: decoded._id, email: decoded.email };
     next();
   } catch (err) {
-    throw new ApiError(401, "Unauthorized request! Invalid token provided");
+    return next(new ApiError(401, "Unauthorized request! Token is invalid"));
   }
 };
 
