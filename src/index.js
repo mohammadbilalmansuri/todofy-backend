@@ -18,3 +18,5 @@ connectDB()
   .catch((error) => {
     console.error("MongoDB Connection Failed:", error);
   });
+
+export default app; // Reqired for Vercel
