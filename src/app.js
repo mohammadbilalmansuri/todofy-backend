@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://todofy-bilal.vercel.app",
+    origin: ALLOWED_ORIGINS,
     credentials: true,
   })
 );
