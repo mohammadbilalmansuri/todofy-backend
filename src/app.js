@@ -6,8 +6,6 @@ import todoRoutes from "./routes/todo.routes.js";
 import globalErrorHandler from "./middlewares/errorHandler.middleware.js";
 import { ALLOWED_ORIGINS } from "./constants.js";
 
-console.log(ALLOWED_ORIGINS);
-
 const app = express();
 
 app.use(
