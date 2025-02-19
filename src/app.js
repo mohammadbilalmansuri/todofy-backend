@@ -17,6 +17,11 @@ app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(cookieParser());
 
+app.use((req, res, next) => {
+  console.log(`Request from IP: ${req.ip}`);
+  next();
+});
+
 // API Routes
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/todos", todoRoutes);
