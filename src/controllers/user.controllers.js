@@ -126,7 +126,10 @@ export const refreshAccessToken = asyncHandler(async (req, res) => {
       refreshToken: newRefreshToken,
     }).send(res);
   } catch (error) {
-    res.clearCookie("accessToken").clearCookie("refreshToken");
+    res
+      .clearCookie("accessToken", COOKIE_OPTIONS)
+      .clearCookie("refreshToken", COOKIE_OPTIONS);
+
     throw new ApiError(401, "Invalid refresh token");
   }
 });
